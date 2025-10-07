@@ -1,9 +1,9 @@
 # Projeto-Final-CRUD-Completo
 Este projeto foi desenvolvido como trabalho final da disciplina de Desenvolvimento Web, com o objetivo de consolidar todos os conceitos aprendidos durante o curso — desde o uso do padrão MVC, autenticação e persistência de dados até a integração com o Doctrine ORM.  
 
-# 🧩 Projeto Final — CRUD Completo com Zend Framework e Doctrine ORM
+# Projeto Final — CRUD Completo com Zend Framework e Doctrine ORM
 
-## 📘 Descrição do Projeto  
+## Descrição do Projeto  
 Este projeto foi desenvolvido como **trabalho final da disciplina de Desenvolvimento Web**, com o objetivo de consolidar o aprendizado das principais etapas do desenvolvimento de sistemas web modernos.  
 
 O sistema é uma aplicação **CRUD completa (Create, Read, Update, Delete)**, desenvolvida com **Zend Framework** e **Doctrine ORM**, permitindo o gerenciamento de registros de forma dinâmica, com autenticação de usuários e persistência de dados em banco relacional.
