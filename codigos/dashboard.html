@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Sistema Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>📖 Painel da Biblioteca</h2>
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <main>
+    <section class="crud-section">
+      <h3>Gerenciar Livros</h3>
+      <form id="bookForm">
+        <input type="text" id="bookTitle" placeholder="Título do livro" required>
+        <input type="text" id="bookAuthor" placeholder="Autor" required>
+        <button type="submit">Adicionar Livro</button>
+      </form>
+
+      <table id="booksTable">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Livros serão listados aqui -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
