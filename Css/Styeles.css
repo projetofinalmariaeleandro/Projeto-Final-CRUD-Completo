@@ -1,174 +1,194 @@
-:root{
-  --bg:#0f172a; /* slate-900 */
-  --surface:#0b1220; /* deep bg */
-  --card:#111827; /* gray-900 */
-  --muted:#94a3b8; /* slate-400 */
-  --text:#e5e7eb; /* gray-200 */
-  --primary:#22c55e; /* green-500 */
-  --ring:#4ade80; /* green-400 */
-  --danger:#ef4444; /* red-500 */
-  --warning:#f59e0b; /* amber-500 */
-  --ok:#3b82f6; /* blue-500 */
-  --shadow:0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.03);
-  --radius:18px;
+/* ----------- RESET ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* Reset / base */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";
-  background:
-    radial-gradient(1200px 500px at 100% -10%, rgba(34,197,94,.15), transparent),
-    linear-gradient(180deg,#0b1220,#0b1220 60%, #0f172a 100%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+body {
+  background: #0f0f0f;
+  color: #f0f0f0;
 }
 
-/* Header / Nav */
-.header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(8px);background:rgba(15,23,42,.7);border-bottom:1px solid rgba(148,163,184,.15)}
-.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
-.brand svg{width:28px;height:28px}
-.tabs{display:flex;gap:10px;flex-wrap:wrap}
-
-/* .tab estiliza tanto <button class="tab"> quanto <a class="tab"> */
-.tab{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  border:1px solid rgba(148,163,184,.2);
-  border-radius:999px;
-  background:rgba(17,24,39,.7);
-  color:var(--text);
-  cursor:pointer;
-  text-decoration:none;
-  transition:.18s;
-  font-weight:600;
-  font-size:14px;
-}
-.tab:hover{ transform:translateY(-1px); border-color:rgba(74,222,128,.5); }
-
-/* ativo por atributo em páginas separadas ou por classe (quando usa JS) */
-.tab.active,
-.tab[aria-current="page"],
-.tab[aria-selected="true"]{
-  background:linear-gradient(180deg,rgba(34,197,94,.18),rgba(34,197,94,.08));
-  border-color:var(--ring);
-  box-shadow:0 0 0 2px rgba(74,222,128,.25) inset;
+:root {
+  --primary: #22c55e;
+  --danger: #ef4444;
+  --card: #1a1a1a;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,.4);
 }
 
-/* Container / layout */
-.container{max-width:1200px;margin-inline:auto;padding:24px}
-.grid{display:grid;grid-template-columns:1.1fr 2fr;gap:20px}
-@media (max-width: 980px){.grid{grid-template-columns:1fr}}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.12);border-radius:var(--radius);box-shadow:var(--shadow)}
-.card .bd{padding:18px}
-.card .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.card h2{margin:0;font-size:18px;letter-spacing:.2px}
-.muted{color:var(--muted)}
-.divider{height:1px;background:rgba(148,163,184,.15);margin:18px 0}
-
-/* Forms */
-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-form .full{grid-column:1/-1}
-label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}
-input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid rgba(148,163,184,.18);background:#0b1220;color:var(--text);outline:none;transition:.15s}
-textarea{min-height:88px;resize:vertical}
-input:focus,select:focus,textarea:focus{border-color:var(--ring);box-shadow:0 0 0 3px rgba(74,222,128,.15)}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.btn{appearance:none;cursor:pointer;border:none;border-radius:12px;padding:10px 14px;font-weight:600;letter-spacing:.2px;display:inline-flex;gap:8px;align-items:center;justify-content:center;transition:.15s}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-.btn.primary{background:linear-gradient(180deg,rgba(34,197,94,.85),rgba(34,197,94,.75));color:#052e16}
-.btn.primary:hover{filter:saturate(1.1)}
-.btn.ghost{background:transparent;border:1px solid rgba(148,163,184,.2);color:var(--text)}
-.btn.ghost:hover{border-color:var(--ring)}
-.btn.danger{background:linear-gradient(180deg,rgba(239,68,68,.9),rgba(239,68,68,.75));color:#450a0a}
-.search{min-width:260px}
-
-/* Tables */
-.table-wrap{overflow:auto}
-.table{width:100%;border-collapse:separate;border-spacing:0 8px}
-.table th,.table td{padding:12px 14px;background:rgba(2,6,23,.5);border:1px solid rgba(148,163,184,.12)}
-.table thead th{background:rgba(34,197,94,.08);border-color:rgba(74,222,128,.25);text-align:left;font-size:12px;color:var(--muted);font-weight:600}
-.table tbody tr{transition:.15s}
-.table tbody tr:hover{transform:translateY(-1px)}
-.table tbody td{font-size:14px}
-.table .right{text-align:right}
-.table .center{text-align:center}
-
-/* Panels (quando usa abas na msm página — ainda útil) */
-.panel{display:none}
-.panel.active{display:block}
-
-/* Loans */
-.loan-grid{display:grid;grid-template-columns:2fr 2fr 1.2fr auto;gap:12px;align-items:end;margin:6px 0 12px}
-@media (max-width: 880px){.loan-grid{grid-template-columns:1fr}}
-
-/* Footer */
-.footer{border-top:1px solid rgba(148,163,184,.15);padding:16px 24px;margin-top:24px;background:rgba(15,23,42,.5)}
-
-/* BADGES — attribute selector (robusto para textos com espaços) */
-.badge{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:.2px;
-  color:var(--text);
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(148,163,184,.06);
+/* ----------- NAV ----------- */
+.header {
+  background: #111;
+  padding: 20px;
+  box-shadow: var(--shadow);
 }
 
-/* estilos por valor exato de data-status */
-.badge[data-status="Ativo"]{
-  background:linear-gradient(180deg, rgba(59,130,246,0.12), rgba(59,130,246,0.06));
-  border-color: rgba(59,130,246,0.18);
-  color:var(--ok);
-}
-.badge[data-status="Em uso"]{
-  background:linear-gradient(180deg, rgba(34,197,94,0.12), rgba(34,197,94,0.06));
-  border-color: rgba(34,197,94,0.18);
-  color:var(--primary);
-}
-.badge[data-status="Devolvido"]{
-  background:linear-gradient(180deg, rgba(148,163,184,0.06), rgba(148,163,184,0.02));
-  border-color: rgba(148,163,184,0.12);
-  color:var(--muted);
-}
-.badge[data-status="Sem empréstimos"],
-.badge[data-status="Sem Emprestimos"]{
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-color: rgba(148,163,184,0.08);
-  color:var(--muted);
-}
-.badge[data-status*="Atrasado"],
-.badge[data-status*="Precisa"]{
-  background:linear-gradient(180deg, rgba(239,68,68,0.12), rgba(239,68,68,0.06));
-  border-color: rgba(239,68,68,0.16);
-  color:var(--danger);
-}
-.badge[data-status*="1 empréstimo"],
-.badge[data-status*="1 Emprestimo"]{
-  background:linear-gradient(180deg, rgba(245,158,11,0.12), rgba(245,158,11,0.06));
-  border-color: rgba(245,158,11,0.18);
-  color:var(--warning);
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
-/* Responsividade e pequenos refinamentos */
-@media (max-width: 720px){
-  .search{min-width:100%; width:100%}
-  .loan-grid{grid-template-columns:1fr; gap:10px}
-  .table thead th, .table tbody td{padding:10px 12px}
+.nav a {
+  text-decoration: none;
+  color: #ddd;
+  margin-left: 20px;
 }
 
-/* foco e acessibilidade */
-.btn.ghost:focus{ box-shadow: 0 0 0 4px rgba(74,222,128,0.08); outline: none; }
-.table tbody tr:focus-within, .table tbody tr:hover{ box-shadow: 0 6px 18px rgba(2,6,23,0.35); }
+.nav a:hover {
+  color: var(--primary);
+}
 
-/* Pequeno ajuste para que links .tab no header tenham mesmo height visual dos botões */
-.tabs .tab { line-height:1; }
+/* ----------- CONTAINER ----------- */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ----------- FORM ----------- */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background: #181818;
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
+.full {
+  grid-column: 1 / 3;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: #222;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--primary);
+  color: #000;
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+/* ----------- CARDS ----------- */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card small {
+  opacity: .7;
+}
+
+/* ----------- PAGINAÇÃO ----------- */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: var(--primary);
+  color: #000;
+}
+
+/* ----------- CATEGORIAS ----------- */
+.categorias {
+  margin: 30px 0 10px;
+}
+
+.categorias button {
+  margin-right: 10px;
+  background: #222;
+  border: 1px solid #333;
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.categorias button.active {
+  background: var(--primary);
+  color: #000;
+}
+
+/* ----------- TABELA (Clientes) ----------- */
+table {
+  width: 100%;
+  margin-top: 20px;
+  background: #181818;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background: #111;
+  text-align: left;
+}

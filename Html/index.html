@@ -4,83 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Biblioteca Horizon — Início</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./Styeles.css" />
-<style>
-/* Tela inicial mais chamativa */
-.hero {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:40px;
-  padding:60px 24px;
-  flex-wrap:wrap;
-}
-.hero img {
-  max-width:400px;
-  width:100%;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.5);
-}
-.hero-text {
-  max-width:600px;
-}
-.hero-text h1 {
-  font-size:36px;
-  margin-bottom:16px;
-  color:var(--primary);
-}
-.hero-text p {
-  font-size:18px;
-  line-height:1.6;
-  color:var(--text);
-}
-.btn-link {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
-  background:var(--primary);
-  color:#052e16;
-  font-weight:600;
-  border-radius:12px;
-  text-decoration:none;
-  transition:.2s;
-}
-.btn-link:hover {
-  filter:saturate(1.2);
-}
-.about-section {
-  max-width:1000px;
-  margin:60px auto;
-  display:flex;
-  flex-wrap:wrap;
-  gap:40px;
-  align-items:center;
-  padding:0 24px;
-}
-.about-section img {
-  max-width:450px;
-  width:100%;
-  border-radius:18px;
-  box-shadow:var(--shadow);
-}
-.about-section .text {
-  max-width:550px;
-}
-.about-section h2 {
-  font-size:28px;
-  margin-bottom:16px;
-  color:var(--primary);
-}
-.about-section p {
-  font-size:16px;
-  line-height:1.6;
-  color:var(--text);
-}
-</style>
+
+<link rel="stylesheet" href="../Css/Styeles.css" />
 </head>
+
 <body>
 
 <header class="header">
@@ -92,7 +23,9 @@
       </svg>
       <span>Biblioteca Horizon</span>
     </div>
+
     <div class="tabs">
+      <a href="./index.html" class="tab active" aria-current="page">Início</a>
       <a href="./Clientes.html" class="tab">Cadastro</a>
       <a href="./Acervo.html" class="tab">Acervo</a>
     </div>
@@ -101,26 +34,60 @@
 
 <main class="container">
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="./imagem1.webp" alt="Imagem representativa da Biblioteca Horizon">
+    <img src="../Image/imagem1.webp" alt="Imagem representativa da Biblioteca Horizon">
+
     <div class="hero-text">
-      <h1>Bem-vindo à Biblioteca Horizon</h1>
-      <p>Explore um universo de conhecimento com nossa biblioteca virtual independente. 
-      Aqui, você encontra livros, romances, mangás e muito mais, tudo ao alcance de um clique. 
-      A Horizon é feita para leitores apaixonados, que buscam aprender, se divertir e descobrir novos mundos.</p>
-      <a href="./Clientes.html" class="btn-link">Comece seu cadastro</a>
+      <h1>Uma nova forma de explorar conhecimento</h1>
+      <p>A Biblioteca Horizon conecta você a livros, mangás, romances e conteúdos acadêmicos. 
+      Tudo em um ambiente rápido, moderno e totalmente virtual.</p>
+      <a href="./Clientes.html" class="btn-link">Começar agora</a>
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section class="about-section">
-    <img src="./imagem5.webp" alt="Leitura na Biblioteca Horizon">
+  <!-- DESTAQUES / CATEGORIAS -->
+  <section class="features container">
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Livros</h2>
+        <p class="muted">Romance, ficção, técnico e acadêmico.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Mangás</h2>
+        <p class="muted">Acervo pensado também para leitores de quadrinhos.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Revistas</h2>
+        <p class="muted">Conteúdos periódicos e coleções especiais.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Acadêmicos</h2>
+        <p class="muted">Pesquisa e referência — ideal para estudos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about-section container">
+    <img src="../Image/imagem5.webp" alt="Leitura na Biblioteca Horizon">
+
     <div class="text">
       <h2>Sobre a Biblioteca Horizon</h2>
-      <p>A Biblioteca Horizon é totalmente virtual e independente de instituições de ensino. Nosso objetivo é democratizar o acesso à leitura e à cultura, conectando leitores a milhares de títulos de forma rápida e segura. 
-      Com um acervo diversificado e ferramentas intuitivas, você pode registrar seus livros favoritos, acompanhar empréstimos e descobrir novas leituras todos os dias.</p>
-      <p>Seja você um leitor casual ou um estudioso dedicado, a Horizon é o lugar perfeito para mergulhar no conhecimento. Cadastre-se e comece sua jornada literária agora mesmo.</p>
+      <p>A Biblioteca Horizon democratiza o acesso ao conhecimento com um acervo digital completo,
+      gratuito e fácil de navegar. Registre livros, acompanhe empréstimos e descubra novas obras todos os dias.</p>
+
+      <p>Seja para estudo, lazer ou pesquisa, a Horizon é o lugar ideal para quem busca conhecimento
+      com praticidade, velocidade e modernidade.</p>
     </div>
   </section>
 
@@ -128,13 +95,21 @@
 
 <footer class="footer">
   <div class="container small muted">
-    Feito com ♥ para demonstrar a Biblioteca Horizon. — <span id="anoAtual"></span>
+    Feito com ♥ — <span id="anoAtual"></span>
   </div>
+  <button id="backToTop" class="btn ghost" title="Voltar ao topo" style="position:fixed;right:16px;bottom:16px;display:none;">↑</button>
 </footer>
 
+<script src="../Js/app.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', ()=>{
   document.getElementById('anoAtual').textContent = new Date().getFullYear();
+
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', ()=> {
+    if(window.scrollY > 300) btn.style.display = 'inline-flex'; else btn.style.display = 'none';
+  });
+  btn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
 });
 </script>
 
