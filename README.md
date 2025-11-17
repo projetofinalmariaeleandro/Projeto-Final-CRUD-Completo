@@ -22,9 +22,8 @@ O sistema é uma aplicação **CRUD completa (Create, Read, Update, Delete)**, d
 - **PHP 8+**  
 - **Zend Framework / Laminas MVC**  
 - **Doctrine ORM**  
-- **MySQL / PostgreSQL**  
-- **Composer**  
-- **HTML5, CSS3, Bootstrap 5**  
+- **Banco de dados local**   
+- **HTML5, CSS3**  
 - **Git e GitHub**
 
 ---
@@ -33,8 +32,6 @@ O sistema é uma aplicação **CRUD completa (Create, Read, Update, Delete)**, d
 - Tela de **Login e Logout** com autenticação.  
 - **Listagem, inclusão, edição e exclusão** de registros (CRUD completo).  
 - **Validação de formulários** e mensagens de erro personalizadas.  
-- **Persistência de dados** com Doctrine ORM.  
-- **Busca e filtros** em listagens.  
 - Interface **responsiva e intuitiva**.
 
 ---
