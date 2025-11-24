@@ -1,0 +1,24 @@
+[
+    {
+        "id": "6923cc928f213",
+        "titulo": "Minicurso de Programa\u00e7\u00e3o com JavaScript",
+        "autor": "fernandinho ",
+        "ano": "2000",
+        "status": "disponivel"
+    },
+    {
+        "id": "6923cca1751a6",
+        "titulo": "Design UX\/UI",
+        "autor": "claudio",
+        "ano": "2016",
+        "status": "alugado",
+        "usuario": "lucas"
+    },
+    {
+        "id": "6923ccbbc3076",
+        "titulo": "L\u00f3gica De Programa\u00e7\u00e3o ",
+        "autor": "laudenilson",
+        "ano": "2017",
+        "status": "disponivel"
+    }
+]
