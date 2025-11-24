@@ -40,7 +40,9 @@ return.php
 ├── data/livros.json   # Acervo
 ├── data/usuarios.json # Usuários
 
-## ⚙️ Como executar
+---
+
+##  Como executar
 Clone este repositório
 Coloque os arquivos na pasta htdocs do XAMPP.
 Acesse no navegador:
