@@ -25,15 +25,24 @@ Este projeto implementa as operações básicas de **CRUD** (Create, Read, Updat
 ##  Estrutura do projeto
 biblioteca-horizon/
 ├── index.php          # Login + cadastro
+
 ├── dashboard.php      # Acervo com cards
+
 ├── add.php /edit.php / delete.php / rent.php / return.php
+
 ├── includes/
 │   ├── header.php     # Cabeçalho com logo e menu
+
 │   ├── footer.php     # Rodapé institucional
+
 │   └── auth.php       # Proteção de páginas
+
 ├── css/style.css      # Estilo completo
+
 ├── img/logo.png       # Logo da biblioteca
+
 ├── data/livros.json   # Acervo
+
 ├── data/usuarios.json # Usuários
 
 ---
