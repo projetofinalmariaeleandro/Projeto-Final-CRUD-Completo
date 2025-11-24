@@ -31,6 +31,7 @@ biblioteca-horizon/
 ├── add.php /edit.php / delete.php / rent.php / return.php
 
 ├── includes/
+
 │   ├── header.php     # Cabeçalho com logo e menu
 
 │   ├── footer.php     # Rodapé institucional
