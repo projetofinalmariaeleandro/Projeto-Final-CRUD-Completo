@@ -26,11 +26,7 @@ Este projeto implementa as operações básicas de **CRUD** (Create, Read, Updat
 biblioteca-horizon/
 ├── index.php          # Login + cadastro
 ├── dashboard.php      # Acervo com cards
-├── add.php /
-edit.php / 
-delete.php / 
-rent.php / 
-return.php
+├── add.php /edit.php / delete.php / rent.php / return.php
 ├── includes/
 │   ├── header.php     # Cabeçalho com logo e menu
 │   ├── footer.php     # Rodapé institucional
